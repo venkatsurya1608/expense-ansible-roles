@@ -1,3 +1,10 @@
+vars:
+  login_host: db.venkatdevops1608.online
+  vars_prompt:
+  - name: my_root_password
+    prompt: please enter mysql root password
+    private: no
+
 - name: install mysql-server
   ansible.builtin.dnf:
     name: mysql-server
@@ -28,7 +35,7 @@
 - name: print output
   ansible.builtin.debug:
     msg: "output: {{mysql_connection_output}}"
-    
+
 - name: setup root password
   ansible.builtin.command: "mysql_secure_installation --set-root-pass {{my_root_password}}"
   when: mysql_connection_output.failed is true 
