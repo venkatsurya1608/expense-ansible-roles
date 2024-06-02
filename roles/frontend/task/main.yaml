@@ -22,7 +22,7 @@
   notify:
   - restart nginx
 
-# - name: restart nginx
+# - name: restart nginx            #handlers use chesamu
 #   ansible.builtin.service:
 #     name: nginx
 #     state: restarted

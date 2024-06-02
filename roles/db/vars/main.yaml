@@ -2,6 +2,6 @@ login_user: root
 
 login_host: db.venkatdevops1608.online
 
-my_root_password: ExpenseApp@1
+login_password: ExpenseApp@1
 
 
